@@ -1,4 +1,9 @@
 .popup__container {
   position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #000;
+  text-align: center;
+  padding: 36px;
 }
 

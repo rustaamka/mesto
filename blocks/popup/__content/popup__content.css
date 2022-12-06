@@ -1,12 +1,6 @@
 .popup__content {
 max-width: 430px;
-display: flex;
 background-color: #fff;
-color: #000;
-align-items: center;
-flex-wrap: wrap;
-text-align: center;
-border-radius: 10px;
 position: relative;
 z-index: 3;
 }
