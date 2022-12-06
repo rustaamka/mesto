@@ -1,0 +1,15 @@
+.popup__form {
+  width: 358px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.popup__form:focus {
+  border-style: none;
+}
+
+@media screen and (max-width:320px) {
+  .popup__form {
+    width: 238px;
+  }
+}
