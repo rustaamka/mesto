@@ -1,5 +1,5 @@
 .profile__button-rectangle {
-  background-image: url(/images/plus.svg);
+  background-image: url('../../../images/plus.svg');
   background-repeat: no-repeat;
   background-position: center;
   border: 2px solid #FFFFFF;
@@ -31,5 +31,6 @@
 @media screen and (max-width:380px) {
   .profile__button-rectangle {
     width: 282px;
+    margin-top: 32px;
   }
 }

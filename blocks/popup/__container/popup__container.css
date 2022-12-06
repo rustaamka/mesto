@@ -3,7 +3,11 @@
   background-color: #fff;
   border-radius: 10px;
   color: #000;
-  text-align: center;
   padding: 36px;
 }
 
+@media screen and (max-width:320px) {
+  .popup__container {
+    padding: 25px 22px;
+  }
+}
