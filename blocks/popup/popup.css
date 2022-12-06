@@ -5,9 +5,7 @@
   top: 0;
   left: 0;
   z-index: 2;
-  background-color: #000;
   margin: 0 auto;
-  display: none;
   background-color: rgba(0, 0, 0, .8);
   display: flex;
   align-items: center;

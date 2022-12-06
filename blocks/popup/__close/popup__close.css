@@ -2,10 +2,9 @@
   height: 32px;
   width: 32px;
   position: absolute;
-  background-image: url(/images/popup__close.svg);
+  background-image: url(../../images/popup__close.svg);
   right: 384px;
   top: 228px;
-  background-color: #000;
   border: 0;
   cursor: pointer;
 }
