@@ -1,9 +1,9 @@
 .profile__button {
-  background-image: url('../../../images/Vector.png');
+  background-image: url('../../../images/Vector.svg');
   background-repeat: no-repeat;
   width: 24px;
   height: 24px;
-  background-color: #000;
+  background-color: transparent;
   border: 1px solid #FFF;
   background-position: center;
   margin: 16px 0 0 18px;
@@ -22,6 +22,7 @@
 
 @media screen and (max-width:320px) {
   .profile__button {
+    background-size: 7.5px 7.5px;
     width: 18px;
     height: 18px;
     margin: 7px -25px 0 10px;

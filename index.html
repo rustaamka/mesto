@@ -5,8 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mesto</title>
-  <script async src="./scripts/index.js"></script>
-  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./pages/index.css">
 </head>
 <body class="page">
   <div class="page__container">
@@ -20,55 +19,55 @@
           <div class="profile__info">
             <div class="profile__name">
               <h1 class="profile__title">Жак-Ив Кусто</h1>
-              <button class="profile__button">
+              <button type="button" class="profile__button">
               </button>
             </div>
             <p class="profile__subtitle">Исследователь океана</p>
           </div>
         </div>
-        <button class="profile__button-rectangle"></button>
+        <button type="button" class="profile__button-rectangle"></button>
       </section>
       <section class="elements">
         <article class="element">
           <img class="element__image" src="./images/karachaevsk.png" alt="старая башня на фоне горы">
           <div class="element__info">
             <h2 class="element__text">Карачаевск</h2>
-            <button class="element__like"></button>
+            <button type="button" class="element__like"></button>
           </div>
         </article>
         <article class="element">
           <img class="element__image" src="./images/elbrus.png" alt="поверхность горы Эльбрус">
           <div class="element__info">
             <h2 class="element__text">Гора Эльбрус</h2>
-            <button class="element__like"></button>
+            <button type="button" class="element__like"></button>
           </div>
         </article>
         <article class="element">
           <img class="element__image" src="./images/dombai.png" alt="вершина горы рядом с лесом">
           <div class="element__info">
             <h2 class="element__text">Домбай</h2>
-            <button class="element__like"></button>
+            <button type="button" class="element__like"></button>
           </div>
         </article>
         <article class="element">
           <img class="element__image" src="./images/elbrus.png" alt="поверхность горы Эльбрус">
           <div class="element__info">
             <h2 class="element__text">Гора Эльбрус</h2>
-            <button class="element__like"></button>
+            <button type="button" class="element__like"></button>
           </div>
         </article>
         <article class="element">
           <img class="element__image" src="./images/dombai.png" alt="вершина горы рядом с лесом">
           <div class="element__info">
             <h2 class="element__text">Домбай</h2>
-            <button class="element__like"></button>
+            <button type="button" class="element__like"></button>
           </div>
         </article>
         <article class="element">
           <img class="element__image" src="./images/karachaevsk.png" alt="старая башня на фоне горы">
           <div class="element__info">
             <h2 class="element__text">Карачаево-Черкессия</h2>
-            <button class="element__like"></button>
+            <button type="button" class="element__like"></button>
           </div>
         </article>
       </section>
@@ -78,17 +77,16 @@
     </footer>
     <div class="popup">
       <div class="popup__container">
-        <button class="popup__close"></button>
+        <button type="button" class="popup__close"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <div class="popup__content">
           <form class="popup__form" action="#">
-            <input class="popup__input popup__input_name" type="text" placeholder="Введите имя">
-            <input class="popup__input popup__input_job" type="text" placeholder="Расскажите о себе">
-            <button class="popup__save">Сохранить</button>
+            <input name="name" class="popup__input form__input_value_name" type="text" placeholder="Введите имя">
+            <input name="job" class="popup__input form__input_value_job" type="text" placeholder="Расскажите о себе">
+            <button type="submit" class="popup__save">Сохранить</button>
           </form>
-        </div>
       </div>
     </div>
     </div>
+    <script src="./scripts/index.js"></script>
 </body>
 </html>

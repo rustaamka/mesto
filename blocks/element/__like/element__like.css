@@ -5,7 +5,7 @@
   width: 22px;
   height: 19px;
   border: none;
-  background-color: #fff;
+  background-color: inherit;
 }
 
 .element__like:hover {
