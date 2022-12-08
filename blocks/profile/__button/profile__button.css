@@ -17,14 +17,14 @@
 @media screen and (max-width:780px) {
   .profile__button {
     margin: 0 0 0 10px;
-  }
-}
-
-@media screen and (max-width:320px) {
-  .profile__button {
     background-size: 7.5px 7.5px;
     width: 18px;
     height: 18px;
+  }
+}
+
+@media screen and (max-width:380px) {
+  .profile__button {
     margin: 7px 0 0 10px;
   }
 }
