@@ -24,7 +24,7 @@ function valuesSave(evt) {
   evt.preventDefault();
   profileName.textContent = namePopup.value;
   profileJob.textContent = jobPopup.value;
-  popupRemove();
+  closePopup();
 }
 
 popupForm.addEventListener('submit', valuesSave);
