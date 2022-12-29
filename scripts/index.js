@@ -31,7 +31,7 @@ popupForm.addEventListener('submit', valuesSave);
 
 //5
 const buttonAddCardPopup = document.querySelector('.profile__button-rectangle');
-const popupAddCard = document.querySelector('.popup__add-cards');
+const popupAddCard = document.querySelector('.popup-add');
 const popupAddCardName = document.querySelector('.popup__input_value_text');
 const popupAddCardLink = document.querySelector('.popup__input_value_link');
 const popupImage = document.querySelector('.popup-image');
