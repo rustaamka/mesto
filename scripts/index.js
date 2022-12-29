@@ -89,7 +89,7 @@ const openBigImg = (img, text) => {
   popupImageOpen.src = img;
   popupImageOpen.alt = text;
   popupInputImgText.textContent = text;
-}
+};
 
 
 //создание карточки
