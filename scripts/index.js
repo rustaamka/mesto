@@ -112,7 +112,7 @@ const templateElements = document.querySelector('#template-elements');
 const createCard = (name, link) => {
   const newCardAdd = templateElements.content.querySelector('.element').cloneNode(true);
   
-  elementCardImage = newCardAdd.querySelector('.element__image');
+  const elementCardImage = newCardAdd.querySelector('.element__image');
   
   newCardAdd.querySelector('.element__text').textContent = name;
   elementCardImage.src = link;
@@ -156,28 +156,3 @@ const handleCardSave = (evt) => {
 };
 
 popupFormAdd.addEventListener('submit', handleCardSave);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
