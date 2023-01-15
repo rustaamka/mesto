@@ -6,9 +6,11 @@ const profileJob = document.querySelector('.profile__subtitle');
 const profileForm = document.querySelector('.popup__form');
 const namePopup = document.querySelector('.popup__input_value_name');
 const jobPopup = document.querySelector('.popup__input_value_job');
+const popupMain = document.querySelectorAll('.popup');
 
 function openPopup(popup) {
   popup.classList.add("popup_opened");
+  document.removeEventListener('keydown', closePopupEsc)
 };
 
 profileButton.addEventListener('click', () => {
@@ -19,7 +21,8 @@ profileButton.addEventListener('click', () => {
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
-};
+  document.removeEventListener('keydown', closePopupEsc);
+}
 
 profileCloseButton.addEventListener('click', () => {
   closePopup(profilePopup);
@@ -156,3 +159,41 @@ const handleCardSave = (evt) => {
 };
 
 popupFormAdd.addEventListener('submit', handleCardSave);
+
+//6 пр
+
+const validationConfig = {
+  formSelector: '.popup__form',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__save',
+  inactiveButtonClass: '.popup__button_disabled',
+  inputErrorClass: '.popup__input_type_error',
+  errorClass: '.popup__error_visible'
+};
+
+//закрытие на оверлей
+function closePopupOverlay(evt) {
+  if (evt.target === evt.currentTarget) {
+    closePopup(evt.target);
+  }
+}
+
+//навешиваем слушателя на каждый попап
+popupMain.forEach((popup) => {
+  popup.addEventListener("click", closePopupOverlay);
+})
+
+
+//закрытие попапа на Esc
+function closePopupEsc(evt) {
+  if (evt.key === "Escape") {
+    //находим открытый попап по модификатору
+    const popupCurrent = document.querySelector(".popup_opened");
+    //удаляем открытый попап
+    closePopup(popupCurrent);
+  }
+}
+
+enableValidation(validationConfig);
+
+
