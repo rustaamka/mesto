@@ -6,7 +6,7 @@ const profileJob = document.querySelector('.profile__subtitle');
 const profileForm = document.querySelector('.popup__form');
 const namePopup = document.querySelector('.popup__input_value_name');
 const jobPopup = document.querySelector('.popup__input_value_job');
-const popupMain = document.querySelectorAll('.popup');
+const popups = document.querySelectorAll('.popup');
 
 function openPopup(popup) {
   popup.classList.add("popup_opened");
@@ -188,7 +188,7 @@ function closePopupOverlay(evt) {
 }
 
 //добавляем слушатель на каждый попап
-popupMain.forEach((popup) => {
+popups.forEach((popup) => {
   popup.addEventListener("click", closePopupOverlay);
 })
 
