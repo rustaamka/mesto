@@ -10,7 +10,7 @@ const popupMain = document.querySelectorAll('.popup');
 
 function openPopup(popup) {
   popup.classList.add("popup_opened");
-  document.removeEventListener('keydown', closePopupEsc)
+  document.addEventListener('keydown', closePopupEsc)
 };
 
 profileButton.addEventListener('click', () => {
@@ -81,6 +81,7 @@ const initialCards = [
 //открытие попапа для добавления карточки
 buttonAddCardPopup.addEventListener('click', () => {
   openPopup(popupAddCard);
+  disabledBtnPopup(popupAddCard, validationConfig);
 });
 
 //закрытие попапа добавления карточки
@@ -150,7 +151,6 @@ initialCards.forEach ((element) => {
 });
 
 //добавление в галерею
-
 const handleCardSave = (evt) => {
   evt.preventDefault();
   addNewCard(popupAddCardName.value, popupAddCardLink.value);
@@ -160,16 +160,25 @@ const handleCardSave = (evt) => {
 
 popupFormAdd.addEventListener('submit', handleCardSave);
 
-//6 пр
-
+//6 практическая
 const validationConfig = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__save',
-  inactiveButtonClass: '.popup__button_disabled',
-  inputErrorClass: '.popup__input_type_error',
-  errorClass: '.popup__error_visible'
+  inactiveButtonClass: 'popup__save_disabled',
+  inputErrorClass: 'popup__input_type_error',
+  errorClass: 'popup__error_visible'
 };
+
+//закрытие попапа на Esc
+function closePopupEsc(evt) {
+  if (evt.key === "Escape") {
+    //поиск попапа
+    const popupCurrent = document.querySelector(".popup_opened");
+    //удаление
+    closePopup(popupCurrent);
+  }
+}
 
 //закрытие на оверлей
 function closePopupOverlay(evt) {
@@ -178,21 +187,10 @@ function closePopupOverlay(evt) {
   }
 }
 
-//навешиваем слушателя на каждый попап
+//добавляем слушатель на каждый попап
 popupMain.forEach((popup) => {
   popup.addEventListener("click", closePopupOverlay);
 })
-
-
-//закрытие попапа на Esc
-function closePopupEsc(evt) {
-  if (evt.key === "Escape") {
-    //находим открытый попап по модификатору
-    const popupCurrent = document.querySelector(".popup_opened");
-    //удаляем открытый попап
-    closePopup(popupCurrent);
-  }
-}
 
 enableValidation(validationConfig);
 

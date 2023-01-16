@@ -33,31 +33,31 @@
     <footer class="footer">
       <p class="footer__info">&copy; 2022 Sharipov Rustam</p>
     </footer>
-
-
     <div class="popup popup-profile">
       <div class="popup__container">
         <button type="button" class="popup__close"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
         <form name="edit-form" class="popup__form" action="#" novalidate>
-          <input name="name" class="popup__input popup__input_value_name popup__input_type_error" type="text" id="username" minlength="2" maxlength="40" required placeholder="Введите имя">
+          <input name="name" class="popup__input popup__input_value_name" type="text" id="username" minlength="2"
+            maxlength="40" required placeholder="Введите имя">
           <span class="username-error popup__error popup__error_visable username-error"></span>
-          <input id="job-username" name="job" class="popup__input popup__input_value_job popup__input_type_error" type="text" minlength="2" maxlength="200" required placeholder="Расскажите о себе">
+          <input id="job-username" name="job" class="popup__input popup__input_value_job" type="text" minlength="2"
+            maxlength="200" required placeholder="Расскажите о себе">
           <span class="job-error popup__error popup__error_visable job-username-error"></span>
-          <button type="submit" class="popup__save popup__save_inactive">Сохранить</button>
+          <button type="submit" class="popup__save">Сохранить</button>
         </form>
       </div>
     </div>
-
-
     <div class="popup popup-add">
       <div class="popup__container">
         <button type="button" class="popup__close popup__close_add"></button>
         <h2 class="popup__title">Новое место</h2>
         <form name="edit-form" class="popup__form popup__add-form" action="#" novalidate>
-          <input id="name-photo" name="name" class="popup__input popup__input_value_text popup__input_type_error" type="text" placeholder="Название" required minlength="2" maxlength="30">
+          <input id="name-photo" name="name" class="popup__input popup__input_value_text" type="text"
+            placeholder="Название" required minlength="2" maxlength="30">
           <span class="popup__error popup__error_visable name-photo-error"></span>
-          <input id="link-photo" name="job" class="popup__input popup__input_value_link popup__input_type_error" type="link" placeholder="Ссылка на картинку" required>
+          <input id="link-photo" name="job" class="popup__input popup__input_value_link" type="url"
+            placeholder="Ссылка на картинку" required>
           <span class="popup__error popup__error_visable link-photo-error"></span>
           <button type="submit" class="popup__save">Создать</button>
         </form>
@@ -85,4 +85,3 @@
   <script src="./scripts/index.js"></script>
 </body>
 </html>
-
